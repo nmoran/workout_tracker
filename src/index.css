@@ -1,0 +1,17 @@
+/* Tailwind CSS directives — these are replaced by actual CSS at build time */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom base styles */
+@layer base {
+  html {
+    /* Prevent text size adjustment on mobile rotation */
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    /* Prevent horizontal scroll on mobile */
+    overflow-x: hidden;
+  }
+}

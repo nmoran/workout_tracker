@@ -1,0 +1,74 @@
+{
+  "name": "Pull-up Training",
+  "description": "A structured pull-up progression workout. Focus on quality movement over speed.",
+  "sections": [
+    {
+      "id": "warmup",
+      "name": "Warmup",
+      "exercises": [
+        {
+          "id": "dead-hang",
+          "name": "Dead Hang",
+          "description": "Hang from the bar with shoulders relaxed (not actively engaging). Focus on your grip and controlled breathing. Let gravity decompress your spine.",
+          "tip": "Breath slowly and let your shoulders relax completely,",
+          "type": "timer",
+          "duration": { "min": 40, "max": 60 },
+          "sets": 1,
+          "restAfterSet": 60
+        },
+        {
+          "id": "scapular-pulls",
+          "name": "Scapular Pulls",
+          "description": "Hang from the bar with arms straight. Depress and retract your shoulder blades (squeeze them down and together) WITHOUT bending your elbows. Slow and controlled — this is mobility work.",
+          "type": "reps",
+          "reps": { "min": 6, "max": 8 },
+          "sets": 2,
+          "restAfterSet": 90
+        },
+        {
+          "id": "easy-assisted-pullups",
+          "name": "Easy Assisted Pull-ups",
+          "description": "Use a thick resistance band for plenty of assistance. Focus on full range of motion — dead hang at the bottom, chin over bar at the top. These should feel comfortable.",
+          "type": "reps",
+          "reps": 5,
+          "sets": 1,
+          "restAfterSet": 120
+        }
+      ]
+    },
+    {
+      "id": "workout",
+      "name": "Workout",
+      "exercises": [
+        {
+          "id": "harder-assisted-pullups",
+          "name": "Harder Assisted Pull-ups",
+          "description": "Switch to a thinner band (less assistance). Same movement as warmup — dead hang to chin over bar. Push yourself on these! Rest fully between sets.",
+          "type": "reps",
+          "reps": 5,
+          "sets": 3,
+          "restAfterSet": 120
+        },
+        {
+          "id": "top-hold",
+          "name": "Top Hold",
+          "description": "Jump or step up to chin-over-bar position and hold. Keep shoulders down and back. Maintain tension throughout — don't let yourself slowly sink. Aim for the full duration.",
+          "type": "timer",
+          "duration": 10,
+          "sets": 3,
+          "restAfterSet": 90
+        },
+        {
+          "id": "band-curls",
+          "name": "Band Curls",
+          "description": "Stand on the resistance band, palms facing up, curl both arms to shoulder height. Slow and controlled — 2 seconds up, 2 seconds down.",
+          "tip": "These support elbow health for pull-up training.",
+          "type": "reps",
+          "reps": 8,
+          "sets": 3,
+          "restAfterSet": 60
+        }
+      ]
+    }
+  ]
+}

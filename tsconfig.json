@@ -1,0 +1,49 @@
+{
+  "compilerOptions": {
+    // ---------------------------------------------------------------------------
+    // TYPESCRIPT LESSON: compilerOptions controls how TypeScript behaves.
+    // Each option is a toggle that makes TypeScript stricter or more permissive.
+    // ---------------------------------------------------------------------------
+
+    // Target the JavaScript version that Vite will output
+    "target": "ES2020",
+
+    // Which built-in type definitions to include (browser DOM + modern JS)
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+
+    // We're writing ESModules (import/export), not CommonJS (require)
+    "module": "ESNext",
+
+    // Vite handles bundling, so TypeScript just needs to type-check
+    "moduleResolution": "bundler",
+
+    // Allow importing .ts and .tsx files with extensions
+    "allowImportingTsExtensions": true,
+
+    // Allow importing JSON files (e.g. our workout config)
+    "resolveJsonModule": true,
+
+    // Each file is compiled independently (required for Vite's fast builds)
+    "isolatedModules": true,
+
+    // Don't emit .js files - Vite handles that
+    "noEmit": true,
+
+    // Enable JSX transformation for React 17+ (no need to import React)
+    "jsx": "react-jsx",
+
+    // ---------------------------------------------------------------------------
+    // TYPESCRIPT LESSON: strict mode enables a bundle of strict checks.
+    // This is HIGHLY recommended - it catches many real bugs at compile time.
+    // It includes: strictNullChecks, strictFunctionTypes, and more.
+    // ---------------------------------------------------------------------------
+    "strict": true,
+
+    // Skip type-checking of declaration files in node_modules (faster builds)
+    "skipLibCheck": true,
+
+    // Use class fields syntax (needed for React class components)
+    "useDefineForClassFields": true
+  },
+  "include": ["src", "vite.config.ts"]
+}
