@@ -165,6 +165,7 @@ export interface WorkoutSection {
 }
 
 export interface Workout {
+  id: string;           // Unique identifier, used as React key and for theme lookup
   name: string;
   description?: string; // Optional — the workout may or may not have a description
   sections: WorkoutSection[];

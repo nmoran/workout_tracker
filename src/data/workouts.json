@@ -1,0 +1,168 @@
+[
+  {
+    "id": "pullup-training",
+    "name": "Pull-up Training",
+    "description": "A structured pull-up progression workout. Focus on quality movement over speed.",
+    "sections": [
+      {
+        "id": "warmup",
+        "name": "Warmup",
+        "exercises": [
+          {
+            "id": "dead-hang",
+            "name": "Dead Hang",
+            "description": "Hang from the bar with shoulders relaxed (not actively engaging). Focus on your grip and controlled breathing. Let gravity decompress your spine.",
+            "tip": "Breathe slowly and let your shoulders relax completely.",
+            "type": "timer",
+            "duration": { "min": 40, "max": 60 },
+            "sets": 1,
+            "restAfterSet": 60
+          },
+          {
+            "id": "scapular-pulls",
+            "name": "Scapular Pulls",
+            "description": "Hang from the bar with arms straight. Depress and retract your shoulder blades (squeeze them down and together) WITHOUT bending your elbows. Slow and controlled — this is mobility work.",
+            "type": "reps",
+            "reps": { "min": 6, "max": 8 },
+            "sets": 2,
+            "restAfterSet": 90
+          },
+          {
+            "id": "easy-assisted-pullups",
+            "name": "Easy Assisted Pull-ups",
+            "description": "Use a thick resistance band for plenty of assistance. Focus on full range of motion — dead hang at the bottom, chin over bar at the top. These should feel comfortable.",
+            "type": "reps",
+            "reps": 5,
+            "sets": 1,
+            "restAfterSet": 120
+          }
+        ]
+      },
+      {
+        "id": "workout",
+        "name": "Workout",
+        "exercises": [
+          {
+            "id": "harder-assisted-pullups",
+            "name": "Harder Assisted Pull-ups",
+            "description": "Switch to a thinner band (less assistance). Same movement as warmup — dead hang to chin over bar. Push yourself on these! Rest fully between sets.",
+            "type": "reps",
+            "reps": 5,
+            "sets": 3,
+            "restAfterSet": 120
+          },
+          {
+            "id": "top-hold",
+            "name": "Top Hold",
+            "description": "Jump or step up to chin-over-bar position and hold. Keep shoulders down and back. Maintain tension throughout — don't let yourself slowly sink.",
+            "type": "timer",
+            "duration": 10,
+            "sets": 3,
+            "restAfterSet": 90
+          },
+          {
+            "id": "band-curls",
+            "name": "Band Curls",
+            "description": "Stand on the resistance band, palms facing up, curl both arms to shoulder height. Slow and controlled — 2 seconds up, 2 seconds down.",
+            "tip": "These support elbow health for pull-up training.",
+            "type": "reps",
+            "reps": 8,
+            "sets": 3,
+            "restAfterSet": 60
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "push-core",
+    "name": "Push & Core",
+    "description": "The natural complement to pull-up training. Push movements balance the pulling muscles, and core work builds the stability you need for strict pull-ups.",
+    "sections": [
+      {
+        "id": "warmup",
+        "name": "Warmup",
+        "exercises": [
+          {
+            "id": "arm-circles",
+            "name": "Arm Circles",
+            "description": "Stand tall, extend arms to the sides. Make large slow circles, 10 forward then 10 backward. Gradually increase the circle size.",
+            "type": "timer",
+            "duration": 40,
+            "sets": 1,
+            "restAfterSet": 20
+          },
+          {
+            "id": "wall-slides",
+            "name": "Wall Slides",
+            "description": "Stand with back flat against a wall, arms raised to 90° (goalpost position). Slowly slide arms overhead while keeping elbows and wrists touching the wall. Return slowly.",
+            "tip": "If your lower back arches away from the wall, that's tight lats — common if you train pull-ups. This drill also fixes that.",
+            "type": "reps",
+            "reps": 10,
+            "sets": 2,
+            "restAfterSet": 30
+          }
+        ]
+      },
+      {
+        "id": "push",
+        "name": "Push",
+        "exercises": [
+          {
+            "id": "push-ups",
+            "name": "Push-ups",
+            "description": "Hands shoulder-width apart, body in a straight line from head to heels. Lower chest to the floor, then press back up. Scale by doing them from your knees if needed.",
+            "type": "reps",
+            "reps": { "min": 8, "max": 12 },
+            "sets": 3,
+            "restAfterSet": 90
+          },
+          {
+            "id": "pike-push-ups",
+            "name": "Pike Push-ups",
+            "description": "Start in a downward-dog position with hips high. Bend elbows to lower the top of your head toward the floor, then press back up. This targets the shoulders — the push equivalent of pull-ups.",
+            "type": "reps",
+            "reps": { "min": 5, "max": 8 },
+            "sets": 3,
+            "restAfterSet": 90
+          },
+          {
+            "id": "tricep-dips",
+            "name": "Tricep Dips",
+            "description": "Use a sturdy chair or bench behind you. Grip the edge, legs extended, lower yourself by bending elbows to 90°, then press back up. Keep elbows pointing straight back, not flaring out.",
+            "type": "reps",
+            "reps": { "min": 8, "max": 12 },
+            "sets": 3,
+            "restAfterSet": 60
+          }
+        ]
+      },
+      {
+        "id": "core",
+        "name": "Core",
+        "exercises": [
+          {
+            "id": "plank",
+            "name": "Plank",
+            "description": "Forearms on the floor, elbows under shoulders. Body in a straight line — squeeze glutes, brace your core, don't let hips sag or pike up. Breathe steadily.",
+            "tip": "Think of it as a full-body squeeze, not just holding your abs tight.",
+            "type": "timer",
+            "duration": { "min": 20, "max": 40 },
+            "sets": 3,
+            "restAfterSet": 45
+          },
+          {
+            "id": "hollow-body-hold",
+            "name": "Hollow Body Hold",
+            "description": "Lie on your back. Press your lower back firmly into the floor. Raise your arms overhead and legs to about 45°. Hold this 'banana' shape. If it's too hard, bend your knees.",
+            "tip": "This is one of the best exercises for pull-ups — it trains the exact body tension you need.",
+            "type": "timer",
+            "duration": 20,
+            "sets": 3,
+            "restAfterSet": 45
+          }
+        ]
+      }
+    ]
+  }
+]

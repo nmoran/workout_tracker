@@ -27,6 +27,7 @@ import {
 interface WorkoutPlanProps {
   workout: Workout;
   onStart: () => void;
+  onBack: () => void; // Returns to the workout selector
 }
 
 // =============================================================================
@@ -52,6 +53,21 @@ const SECTION_THEMES: Record<string, SectionTheme> = {
     badge: 'bg-orange-500/20 text-orange-300 border border-orange-500/30',
     border: 'border-orange-500/20',
     icon: '💪',
+  },
+  push: {
+    badge: 'bg-violet-500/20 text-violet-300 border border-violet-500/30',
+    border: 'border-violet-500/20',
+    icon: '🤜',
+  },
+  core: {
+    badge: 'bg-rose-500/20 text-rose-300 border border-rose-500/30',
+    border: 'border-rose-500/20',
+    icon: '🎯',
+  },
+  stretch: {
+    badge: 'bg-teal-500/20 text-teal-300 border border-teal-500/30',
+    border: 'border-teal-500/20',
+    icon: '🧘',
   },
 };
 
@@ -180,7 +196,7 @@ function SectionCard({ section, theme }: SectionCardProps) {
 // Main Component: WorkoutPlan
 // =============================================================================
 
-export function WorkoutPlan({ workout, onStart }: WorkoutPlanProps) {
+export function WorkoutPlan({ workout, onStart, onBack }: WorkoutPlanProps) {
   // Compute totals for the summary header
   const totalExercises = workout.sections.reduce(
     (sum, section) => sum + section.exercises.length,
@@ -195,6 +211,14 @@ export function WorkoutPlan({ workout, onStart }: WorkoutPlanProps) {
   return (
     <div className="min-h-screen bg-slate-900 text-white">
       <div className="max-w-2xl mx-auto px-4 py-8">
+        {/* Back button */}
+        <button
+          onClick={onBack}
+          className="mb-6 text-slate-400 hover:text-white transition-colors text-sm flex items-center gap-1"
+        >
+          ← All Workouts
+        </button>
+
         {/* Header */}
         <div className="mb-8 text-center">
           <div className="inline-block text-4xl mb-3">🏋️</div>
