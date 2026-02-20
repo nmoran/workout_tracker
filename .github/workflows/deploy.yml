@@ -1,44 +1,43 @@
-# GitHub Actions workflow — runs automatically when you push to main
-#
-# What this does:
-#   1. Spins up a fresh Linux machine on GitHub's servers
-#   2. Checks out your code
-#   3. Installs Node.js and your npm packages
-#   4. Runs `npm run build` to produce the dist/ folder
-#   5. Pushes dist/ to a special `gh-pages` branch
-#   6. GitHub Pages serves that branch as your website
-
 name: Deploy to GitHub Pages
 
-# Trigger: run this workflow on every push to the main branch
 on:
   push:
     branches: [main]
 
 permissions:
-  contents: write  # needed to push to the gh-pages branch
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow only one concurrent deployment
+concurrency:
+  group: pages
+  cancel-in-progress: true
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
-
     steps:
-      # Step 1: Get your code onto the machine
       - uses: actions/checkout@v4
 
-      # Step 2: Install Node.js
       - uses: actions/setup-node@v4
         with:
           node-version: 20
 
-      # Step 3: Install npm packages (ci is like install but stricter/faster)
       - run: npm ci
 
-      # Step 4: Build the app → produces dist/ folder
       - run: npm run build
 
-      # Step 5: Push dist/ to the gh-pages branch
-      - uses: peaceiris/actions-gh-pages@v3
+      - uses: actions/upload-pages-artifact@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}  # automatic, no setup needed
-          publish_dir: ./dist
+          path: ./dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/deploy-pages@v4
+        id: deployment
